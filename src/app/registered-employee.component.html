@@ -1,0 +1,21 @@
+<div class="col-sm-8 text-left"> 
+  <h4>Registered Employee</h4>
+  <br/>
+<table  class="table table-bordered">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Employee Code</th>
+    <th colspan="2">Action</th>
+  </tr>
+  <tr *ngFor="let det of details">
+    <td>{{det.id}}</td>
+    <td>{{det.Name}}</td>
+    <td>{{det.Email}}</td>
+    <td>{{det.Code}}</td>
+    <td (click)="deleteRecord(det.id)"><a>Delete</a></td>
+    <td [routerLink]="['/Update',det.id]" ><a>Update</a></td>
+  </tr>
+</table>
+</div>

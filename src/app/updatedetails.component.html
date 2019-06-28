@@ -1,0 +1,44 @@
+<div class="col-sm-8 text-left"> 
+  <h3>Update Employee</h3><br/> 
+<form [formGroup]="employeeDetails" class="form-horizontal"  (ngSubmit)="onUpdate(employeeDetails.value)">
+<div class="form-group">
+ <label class="control-label col-sm-2" for="name1">Name:</label>
+ <div class="col-sm-10">
+   <input type="text" class="form-control" formControlName="empName" id="name1" placeholder="Enter name..." [(ngModel)]="empName" >
+   <div class="alert alert-danger" *ngIf="employeeDetails.get('empName').touched && employeeDetails.get('empName').hasError('required')">
+     <strong>Mandatory!</strong> Name is required.
+   </div> 
+ </div>     
+</div>
+
+<div class="form-group">
+ <label class="control-label col-sm-2" for="email1">Email:</label>
+ <div class="col-sm-10">
+   <input type="text" class="form-control" id="email1" formControlName="empEmail" placeholder="Enter email..." [(ngModel)]="empEmail" >
+   <div class="alert alert-danger" *ngIf="employeeDetails.get('empEmail').touched && employeeDetails.get('empEmail').hasError('required')">
+     <strong>Mandatory!</strong> Email is required.
+   </div> 
+ </div> 
+</div>
+<div class="form-group">
+ <label class="control-label col-sm-2" for="empCode1">Emp Code:</label>
+ <div class="col-sm-10">
+   <input type="text" class="form-control" formControlName="empCode" id="empCode1" placeholder="Enter employee code..." [(ngModel)]="empCode" >
+   <div class="alert alert-danger" *ngIf="employeeDetails.get('empCode').touched && employeeDetails.get('empCode').hasError('required')">
+     <strong>Mandatory!</strong> Employee Code is required.
+   </div> 
+ </div>   
+</div>
+<div class="alert alert-success" *ngIf="Success">
+ <strong>Success!</strong> Record added successfully
+</div>
+<div class="form-group">
+ <div class="col-sm-offset-2 col-sm-10">
+   <button type="submit" class="btn btn-default" [disabled]="employeeDetails.invalid">Update</button>
+ </div>
+</div>
+
+
+</form> 
+  
+ </div>

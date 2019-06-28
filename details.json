@@ -1,0 +1,22 @@
+{
+  "details": [
+    {
+      "Name": "Rahul",
+      "Email": "rahul@gmail.com",
+      "Code": "Emp2001",
+      "id": 2
+    },
+    {
+      "Name": "Rahul1Update",
+      "Email": "ab@gmail.com",
+      "Code": "Emp23456",
+      "id": 3
+    },
+    {
+      "Name": "Rahul1Update_update",
+      "Email": "dev@gmail_update",
+      "Code": "Emp2003",
+      "id": 5
+    }
+  ]
+}

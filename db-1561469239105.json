@@ -1,0 +1,46 @@
+{
+  "details": [
+    {
+      "id": 1,
+      "Name": "Eurasian Collared-Dove",
+      "Email": "Dove@hotmail.com",
+      "Code": "Emp001"
+    },
+    {
+      "Name": "Rahul",
+      "Email": "rahul@gmail.com",
+      "Code": "Emp2001",
+      "id": 2
+    },
+    {
+      "Name": "Rahul1",
+      "Email": "rahul@gmail.com",
+      "Code": "Emp2002",
+      "id": 3
+    },
+    {
+      "Name": "Rahul2",
+      "Email": "rahul@gmail.com",
+      "Code": "Emp2003",
+      "id": 4
+    },
+    {
+      "Name": "z",
+      "Email": "z",
+      "Code": "z",
+      "id": 5
+    },
+    {
+      "Name": "Avinash",
+      "Email": "ab@gmail.com",
+      "Code": "Emp23456",
+      "id": 6
+    },
+    {
+      "Name": "Dev",
+      "Email": "dev@gmail",
+      "Code": "Emp23456",
+      "id": 7
+    }
+  ]
+}

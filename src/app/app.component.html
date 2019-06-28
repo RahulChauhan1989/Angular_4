@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">RCW</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/RegisterEmployee">Register Employee</a></li>
+        <li><a routerLink="/RegisteredEmployee">Registered Employee</a></li>
+        <li><a href="#">Test</a></li>
+        <li><a href="#">Test</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <!-- <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p> -->
+    </div>
+
+    <router-outlet></router-outlet>
+
+
+
+    <div class="col-sm-2 sidenav">
+      <!-- <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Rahul Creative Works</p>
+</footer>
+
+
+</body>
+</html>
+
+
+
+
+
+<div style="text-align:center">
+  <h1>
+   
+  </h1>  
+
+<!-- <childselector (clicked)='OnClicked($event)'></childselector>
+<childselector [ParentValue]='txtValue'></childselector>
+<p><input type="text" #txt1/></p><input type="button" value="Click here" (click)="setvalue(txt1.value)"/>
+<p>{{childdata}}</p> -->
+
+<!-- <h2>Dropdown Binding</h2>
+<label>Select Department</label>
+<select (change)='changedata($event)'>
+  <option *ngFor="let dept of departments" [value]="dept.id">
+    {{dept.name}}
+  </option>
+</select>
+<br/>
+<label for="emp">Employees</label>
+<select id="emp" class="form-control">
+  <option *ngFor="let empobj of Filterempdata">
+   {{empobj.empname}}
+  </option>
+</select>
+
+<h2>Get Method</h2>
+{{name}}<br/>
+{{id}}<br/>
+{{bio}}<br/>
+{{avatar_url}}<br/> -->
+
+
+<!-- <h2>Template Driven Form</h2>
+<form #form1="ngForm" (ngSubmit)="registerUser(form1.value)">
+  <input type="text" name="fname" placeholder="Enter first name.." ngModel  required /><br/>
+  <input type="text" name="lname" placeholder="Enter last name.." ngModel  required /><br/>
+  <button type="submit" [disabled]="!form1.valid">Register</button>  
+</form> -->
+
+<!-- <h2>Model/Reactive Driven Form</h2>
+
+<form  [formGroup]="registrationForm"  (ngSubmit)="onSubmit(registrationForm.value)">   -->
+  <!-- <input  type="text" class="form-control" formControlName="ID" placeholder="ID.."><br/> -->
+  <!-- <div class="error-message"  *ngIf="registrationForm.get('ID').touched && registrationForm.get('ID').hasError('required')"> 
+      ID is required.  
+     </div>   -->
+<!--    
+  <input  type="text" class="form-control" formControlName="Name" placeholder="Name.."><br/>
+  <div class="error-message"  *ngIf="registrationForm.get('Name').touched && registrationForm.get('Name').hasError('required')"> 
+      Name is required.  
+     </div> 
+     <input  type="text" class="form-control" formControlName="Department" placeholder="Department.."><br/>
+     <div class="error-message"  *ngIf="registrationForm.get('Department').touched && registrationForm.get('Department').hasError('required')"> 
+         Department is required.  
+        </div> 
+
+        <input  type="text" class="form-control" formControlName="HOD" placeholder="HOD.."><br/>
+        <div class="error-message"  *ngIf="registrationForm.get('HOD').touched && registrationForm.get('HOD').hasError('required')"> 
+            HOD is required.  
+           </div>  -->
+
+    <!-- <input type="email" class="form-control" formControlName="email" placeholder="Email.."><br/>
+      <div class="error-message"  *ngIf="registrationForm.get('email').touched && registrationForm.get('email').hasError('required')"> 
+           The email is required.  
+          </div>  
+          <div class="error-message" *ngIf="registrationForm.get('email').touched && registrationForm.get('email').hasError('pattern')">  
+              The email format should be <i>rahulchauhansingh@hotmail.com</i>  </div> -->
+                <!-- <button type="submit" class="btn btn-secondary" [disabled]="registrationForm.invalid">Submit</button>
+              
+   </form> -->
+
+   <!-- <h2>Fetching Local Json</h2>
+    <table style="border:1px solid #cccccc">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>HOD Name</th>
+      </tr>
+      <tr *ngFor="let det of details">
+        <td>{{det.id}}</td>
+        <td>{{det.Name}}</td>
+        <td>{{det.Department}}</td>
+        <td>{{det.HODName}}</td>
+      </tr>
+    </table> -->
+
+
+
+
